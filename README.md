@@ -23,6 +23,8 @@ solo cuando la persona se acerca a ellas (`loading="lazy"`).
 
 ## Publicar en Cloudflare Pages
 
+> Guía paso a paso (para cualquier PC, incluso sin conocimientos técnicos): **[PUBLICAR.md](PUBLICAR.md)**.
+
 ### Opción A — conectado a GitHub (recomendada: cada `git push` publica solo)
 
 1. Sube este repositorio a GitHub.
