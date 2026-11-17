@@ -7,7 +7,7 @@
 const CONFIG = {
   whatsapp: '',
   instagram: 'https://www.instagram.com/expressing.in.life',
-  facebook: '',
+  facebook: 'https://www.facebook.com/profile.php?id=100088294076976',
   tiktok: 'https://www.tiktok.com/@expressing.in.life.com',
   zona: '', // p. ej. 'Entregas en la Ciudad de Guatemala y alrededores'
 }
