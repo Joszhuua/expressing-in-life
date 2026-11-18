@@ -6,8 +6,6 @@
   --muted: #b4b4ba;
   --silver: linear-gradient(135deg, #f7f7f8 0%, #a9a9b0 45%, #ffffff 60%, #8e8e96 100%);
   --red: #c8102e;
-  --wa: #25d366;
-  --wa-ink: #062b14;
   --radius: 16px;
   --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --sans: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -62,8 +60,8 @@ p { margin: 0; text-wrap: pretty; }
   transition: transform .15s ease, background-color .15s ease;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-wa { background: var(--wa); color: var(--wa-ink); }
-.btn-wa:hover { background: #3ee27a; }
+.btn-cta { background: var(--red); color: #fff; }
+.btn-cta:hover { background: #e01a3a; }
 .btn-ghost { border-color: #8e8e96; color: var(--text); }
 .btn-ghost:hover { background: #ffffff14; }
 .btn-sm { min-height: 44px; padding: .6rem 1.2rem; font-size: .9rem; }
@@ -136,11 +134,11 @@ p { margin: 0; text-wrap: pretty; }
 
 .site-footer { border-top: 1px solid var(--line); text-align: center; padding: 2rem 1rem 6rem; color: var(--muted); font-size: .85rem; }
 
-/* Botón flotante de WhatsApp */
-.wa-float {
+/* Botón flotante de mensajes (Instagram) */
+.dm-float {
   position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 20;
   display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%;
-  background: var(--wa); color: #fff; box-shadow: 0 10px 30px -8px #000;
+  background: var(--red); color: #fff; box-shadow: 0 10px 30px -8px #000;
   transition: transform .15s ease;
 }
-.wa-float:hover { transform: scale(1.06); }
+.dm-float:hover { transform: scale(1.06); }

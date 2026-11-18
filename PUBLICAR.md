@@ -78,18 +78,31 @@ npx wrangler pages deploy . --project-name expressing-in-life
 
 ## Datos que faltan / cosas a revisar
 
-- **WhatsApp**: en `main.js`, línea `whatsapp: ''` → pon el número con código de país,
-  sin `+` ni espacios. Ejemplo Guatemala: `whatsapp: '50212345678'`.
-  Mientras esté vacío, los botones de WhatsApp llevan a la sección de contacto.
+- **Botones "Cotizar"**: abren el chat de Instagram (`mensajes` en `main.js`).
+  No usamos WhatsApp a propósito, para no publicar un número personal.
 - **Zona de entrega** (opcional): en `main.js`, `zona: 'Entregas en ...'`.
 - **Ver la página en tu PC antes de publicar**: desde la carpeta del proyecto,
   `npx serve .` y abre la dirección que muestre.
 
-## Dominio propio (opcional, ≈ US$10–15 al año)
+## Mejorar la dirección (URL)
 
-Cloudflare → **Workers & Pages** → `expressing-in-life` → **Custom domains** →
-**Set up a custom domain**. Si compras el dominio en Cloudflare
-(**Domain Registration**), el DNS se configura solo.
+La página quedó como **Worker** en `expressing-in-life.josue000-josh.workers.dev`.
+`josue000-josh` es el subdominio de la **cuenta** de Cloudflare, no del proyecto. Opciones:
+
+1. **Gratis, dirección corta → `expressing-in-life.pages.dev`**: crea el proyecto como
+   **Pages** (no Worker): Workers & Pages → **Create** → abajo, *"Looking to deploy Pages?
+   Get started"* → **Import an existing Git repository** → `expressing-in-life` →
+   Build command vacío, output `/`. Luego borra el Worker viejo
+   (Worker → Settings → **Delete**) para no tener dos copias.
+   Si el nombre `expressing-in-life` ya está tomado en pages.dev, Cloudflare agrega
+   letras al final; prueba otro nombre de proyecto, p. ej. `expressinginlife`.
+2. **Gratis, cambiar `josue000-josh`**: Workers & Pages → panel derecho
+   **Subdomain** → **Change** (p. ej. `detallesinolvidables`) →
+   `expressing-in-life.detallesinolvidables.workers.dev`. Afecta a todos los Workers de la cuenta.
+3. **Dominio propio (≈ US$10–15 al año), lo más profesional** → p. ej. `expressinginlife.com`.
+   Cómpralo en Cloudflare (**Domain Registration**) y conéctalo: si es Worker →
+   Settings → **Domains & Routes** → **Add** → **Custom domain**; si es Pages →
+   **Custom domains** → **Set up a custom domain**. Si el dominio está en Cloudflare, el DNS se configura solo.
 
 ## Problemas comunes
 

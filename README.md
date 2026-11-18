@@ -6,7 +6,7 @@ Página estática (HTML + CSS + un poco de JS, sin build) para publicar en **Clo
 
 | Qué | Dónde |
 |---|---|
-| WhatsApp, Instagram, Facebook, TikTok, zona de entrega | `main.js` → objeto `CONFIG` (arriba del archivo) |
+| A dónde llevan los botones "Cotizar", Instagram, Facebook, TikTok, zona de entrega | `main.js` → objeto `CONFIG` (arriba del archivo) |
 | Textos, nombres y descripciones de canastas | `index.html` |
 | Colores y estilos | `styles.css` (variables en `:root`) |
 | Fotos | `img/` |

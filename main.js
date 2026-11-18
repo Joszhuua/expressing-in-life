@@ -1,33 +1,30 @@
 // ============================================================
 //  DATOS DE CONTACTO — edita solo esta parte.
-//  whatsapp: código de país + número, sin "+", espacios ni guiones
-//            (Guatemala: 502 + 8 dígitos, p. ej. "50212345678").
+//  mensajes: a dónde llevan los botones "Cotizar" (chat directo).
+//            ig.me/m/<usuario> abre el chat de Instagram.
 //  Los enlaces de redes que queden vacíos no se muestran.
 // ============================================================
 const CONFIG = {
-  whatsapp: '',
+  mensajes: 'https://ig.me/m/expressing.in.life',
   instagram: 'https://www.instagram.com/expressing.in.life',
   facebook: 'https://www.facebook.com/profile.php?id=100088294076976',
   tiktok: 'https://www.tiktok.com/@expressing.in.life.com',
   zona: '', // p. ej. 'Entregas en la Ciudad de Guatemala y alrededores'
 }
 
-// Botones de WhatsApp: cada uno trae su mensaje en data-wa.
-// Sin número configurado se quedan apuntando a #contacto (no se rompen).
-if (CONFIG.whatsapp) {
-  for (const a of document.querySelectorAll('[data-wa]')) {
-    a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(a.dataset.wa)}`
-    a.target = '_blank'
-    a.rel = 'noopener'
-  }
+const abrir = (a, url) => {
+  a.href = url
+  a.target = '_blank'
+  a.rel = 'noopener'
 }
+
+// Botones "Cotizar": sin enlace configurado se quedan apuntando a #contacto.
+if (CONFIG.mensajes) for (const a of document.querySelectorAll('[data-dm]')) abrir(a, CONFIG.mensajes)
 
 for (const a of document.querySelectorAll('[data-social]')) {
   const url = CONFIG[a.dataset.social]
   if (url) {
-    a.href = url
-    a.target = '_blank'
-    a.rel = 'noopener'
+    abrir(a, url)
     a.hidden = false
   }
 }
