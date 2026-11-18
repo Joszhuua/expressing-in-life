@@ -142,3 +142,7 @@ p { margin: 0; text-wrap: pretty; }
   transition: transform .15s ease;
 }
 .dm-float:hover { transform: scale(1.06); }
+
+.card .price { color: var(--text); font-size: 1.35rem; font-weight: 700; flex: 0; }
+.card .price span { color: var(--muted); font-size: .85rem; font-weight: 500; }
+.card .note { font-size: .8rem; flex: 0; }
